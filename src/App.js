@@ -1,11 +1,12 @@
 
 import { ManulifePage } from './ManulifePage';
 import './App.css';
+import Routes from './route';
 
 function App() {
   return (
     < ManulifePage>
-      <div>build your pages</div>
+      <Routes/>
     </ManulifePage>
   );
 }
