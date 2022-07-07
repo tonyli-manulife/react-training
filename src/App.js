@@ -1,11 +1,18 @@
 
 import { ManulifePage } from './ManulifePage';
+import { Welcome  } from './course-2/demo1';
+import ReactList from './course-2/react-list';
+import ReactStyle from './course-2/react-style';
+import ReactForm from './course-2/react-form';
+
+
 import './App.css';
 
 function App() {
+  console.log('App in')
   return (
     < ManulifePage>
-      <div>build your pages</div>
+       <ReactForm />
     </ManulifePage>
   );
 }

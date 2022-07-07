@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 
 export function ManulifePage(props) {
+  console.log('ManulifePage in')
   return (
     <div className='app'>
       <div className='navigation'>
