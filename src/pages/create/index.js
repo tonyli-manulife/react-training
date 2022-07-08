@@ -7,7 +7,7 @@ export default class Create extends Component{
     }
     render(){
         return (
-            <div>there is create page</div>
+            <div>React form</div>
         )
     }
 }
