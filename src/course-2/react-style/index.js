@@ -1,7 +1,7 @@
 import React from "react";
 
 import styles from './index.module.css'
-import ScssStyles from './index.module.scss'
+// import ScssStyles from './index.module.scss'
 import './index.css'
 
 export default class ReactStyle extends React.Component {
@@ -22,7 +22,7 @@ export default class ReactStyle extends React.Component {
         <h1 className="h1">React Training</h1>
         <h1 className={ styles.h1 }>React Training</h1>
         <h1 className={styles.p}>React Training</h1>
-        <h1 className={ScssStyles.h1}>React Training</h1>
+        {/* <h1 className={ScssStyles.h1}>React Training</h1> */}
       </div>
     )
   }

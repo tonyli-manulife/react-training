@@ -1,18 +1,25 @@
 
 import { ManulifePage } from './ManulifePage';
-import { Welcome  } from './course-2/demo1';
+import ComponentDemo from './course-2/react-component';
+import PropsDemo from './course-2/react-props';
+import StateDemo from './course-2/react-state';
+import LifeCycleDemo from './course-2/react-lifecycle';
+import ReactEvents from './course-2/react-events';
 import ReactList from './course-2/react-list';
 import ReactStyle from './course-2/react-style';
 import ReactForm from './course-2/react-form';
 
-
 import './App.css';
 
 function App() {
-  console.log('App in')
   return (
     < ManulifePage>
-       <ReactForm />
+      <ComponentDemo />
+      {/* <PropsDemo /> */}
+      {/* <StateDemo /> */}
+      {/* <LifeCycleDemo /> */}
+      {/* <ReactEvents /> */}
+      {/* <ReactForm /> */}
     </ManulifePage>
   );
 }
