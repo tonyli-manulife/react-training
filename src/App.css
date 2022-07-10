@@ -41,28 +41,3 @@
   flex: 1;
   padding: 20px;
 }
-
-button {
-  line-height: 1.5rem;
-  font-size: 1.1875rem;
-  font-weight: 700;
-  margin-bottom: 0px;
-  min-height: 60px;
-  min-width: 150px;
-  padding: 0px 30px;
-  cursor: pointer;
-  width: 200px;
-  background: rgb(236, 100, 83);
-  border: 2px solid rgb(236, 100, 83);
-  color: rgb(255, 255, 255);
-}
-
-button:hover {
-  background: rgb(208, 58, 57);
-  border: 2px solid rgb(208, 58, 57);
-  color: rgb(255, 255, 255);
-}
-
-input {
-  border-bottom: 1px solid  rgb(142, 144, 162)
-}

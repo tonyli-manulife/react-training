@@ -1,0 +1,14 @@
+ul{
+    list-style: none;
+    border-top: 1px solid #CFCFCF;
+    padding-top: 10px;
+    padding-inline-start:0;
+}
+ul li{
+    display: flex;
+    margin-top: 20px;
+}
+ul li label{
+    display: block;
+    width: 150px;
+}

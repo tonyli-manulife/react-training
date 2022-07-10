@@ -1,17 +1,16 @@
 import React from "react";
-import { BrowserRouter,Routes,Route } from "react-router-dom";
-
+import { Switch, Route } from "react-router-dom";
 //Here is page
 import HomePage from "./pages/homepage";
 import Create from "./pages/create";
+import TodoList from "./todoList";
 
-export default function MyRoutes(){
+export default function MyRoutes() {
     return (
-        <BrowserRouter>
-            <Routes>
-                <Route exact path="/" element={<HomePage/>}/>
-                <Route path="create" element={<Create/>}/>
-            </Routes>
-        </BrowserRouter>
+        <Switch>
+            <Route exact path="/" component={(props) => <HomePage {...props} />} />
+            <Route path="/create" component={(props) => <Create {...props} />} />
+            <Route path="/todo-list" component={(props) => <TodoList {...props} />} />
+        </Switch>
     )
 }

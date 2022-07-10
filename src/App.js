@@ -1,16 +1,18 @@
 
-import { ManulifePage } from './ManulifePage';
-
+import ManulifePage from './ManulifePage';
+import { Router } from "react-router-dom";
 
 import './App.css';
 import Routes from './route';
+import history from "./history";
 
 function App() {
-  console.log('App in')
   return (
-    < ManulifePage>
-      <Routes/>
-    </ManulifePage>
+    <Router history={history}>
+        < ManulifePage>
+          <Routes/>
+        </ManulifePage>
+    </Router>
   );
 }
 
