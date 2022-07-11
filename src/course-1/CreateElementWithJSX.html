@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <!--note: The quickest way to try JSX in your project is to add this <script> tag to your page:-->
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="text/babel">
+    const domContainer = document.getElementById('root')
+    const ele = <h1>I love JSX!</h1>
+    ReactDOM.render(ele, domContainer)
+  </script>
+</body>
+</html>
