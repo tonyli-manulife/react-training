@@ -43,7 +43,7 @@ export default class ReactForm extends React.Component {
 
   renderReactForm = () => {
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form>
       <label>
         Name:
         <input
@@ -52,12 +52,15 @@ export default class ReactForm extends React.Component {
          onChange={this.handleInputName}
         />
       </label>
-      <button>Submit</button>
+      <button onClick={this.handleSubmit}>Submit</button>
      </form>
     )
   }
 
   render() {
+
+    // return this.renderHTMLForm()
+    // return this.renderReactForm()
     return (
       <div className={styles.form} >
        <form onSubmit={this.handleSubmit}>
@@ -74,7 +77,7 @@ export default class ReactForm extends React.Component {
           <input 
             name="age"
             value={this.state.age}
-            onChange={this.handleInputName}
+            onChange={this.handleInputAge}
           />
         </label>
         <button>Submit</button>

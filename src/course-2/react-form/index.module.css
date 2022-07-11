@@ -29,7 +29,7 @@
   border-bottom: 2px solid rgb(0, 196, 110);
 }
 
-.from button {
+.form button {
   line-height: 1.5rem;
   font-size: 1.1875rem;
   font-weight: 700;
@@ -44,7 +44,7 @@
   color: rgb(255, 255, 255);
 }
 
-.from button:hover {
+.form button:hover {
   background: rgb(208, 58, 57);
   border: 2px solid rgb(208, 58, 57);
   color: rgb(255, 255, 255);

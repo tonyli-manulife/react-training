@@ -14,12 +14,14 @@ import './App.css';
 function App() {
   return (
     < ManulifePage>
-      <ComponentDemo />
+      {/* <ComponentDemo /> */}
       {/* <PropsDemo /> */}
       {/* <StateDemo /> */}
       {/* <LifeCycleDemo /> */}
       {/* <ReactEvents /> */}
-      {/* <ReactForm /> */}
+      {/* <ReactStyle /> */}
+       {/* <ReactList /> */}
+      <ReactForm />
     </ManulifePage>
   );
 }

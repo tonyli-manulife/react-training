@@ -34,8 +34,10 @@ export default class ReactList extends React.Component {
       <div>
         <ul>
           {
-            this.state.data.map(el => {
-              return <li key={el.id}>{el.name}</li>
+            this.state.data.map((el, index) => {
+              return <li key={index}>{el.name}
+                <input />
+              </li>
             })
           }
         </ul>
