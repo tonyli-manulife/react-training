@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { connect } from 'react-redux';
 import Button from "../../components/button";
 import Table from "../../components/table";
-import { getData, deleteData } from '../../redux/action';
+import { getData } from '../../redux/action';
 class HomePage extends Component {
     constructor(props) {
         super(props);
@@ -29,12 +29,6 @@ class HomePage extends Component {
             {
                 label: 'Gender',
                 key: 'gender',
-            },
-            {
-                label: 'Delete',
-                render: (value, row) => {
-                    return <Button onClick={() => this.deleteData(row.id)}>delete</Button>
-                }
             }
         ]
     }
@@ -61,7 +55,7 @@ class HomePage extends Component {
                     columns={this.columns}
                     data={data}
                 />
-                <Button onClick={()=>{console.log(this.props.history.push('create'))}}>Add</Button>
+                <Button onClick={()=>this.props.history.push('create')}>Add</Button>
             </>
         )
     }
@@ -72,7 +66,6 @@ const mapStateToProps = (state) => {
     }
 }
 const mapDispatchToProps = {
-    getData,
-    deleteData
+    getData
 }
 export default connect(mapStateToProps, mapDispatchToProps)(HomePage);
