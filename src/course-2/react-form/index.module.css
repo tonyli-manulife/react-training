@@ -1,0 +1,52 @@
+.form {
+  line-height: 1.5;
+  width: 300px;
+  display: inline-block;
+}
+
+.form label {
+  margin-top: 1rem;
+  display: block;
+}
+
+.form input {
+  display: block;
+  width: 300px;
+  margin-top: 0.8rem;
+  height: 30px;
+  border: none;
+  border-bottom: 1px solid #34384b;
+  background-color: transparent;
+}
+
+.form button {
+  margin-top: 2rem;
+}
+
+.form input:focus {
+  border: none;
+  outline: none;
+  border-bottom: 2px solid rgb(0, 196, 110);
+}
+
+.form button {
+  line-height: 1.5rem;
+  font-size: 1.1875rem;
+  font-weight: 700;
+  margin-bottom: 0px;
+  min-height: 60px;
+  min-width: 150px;
+  padding: 0px 30px;
+  cursor: pointer;
+  width: 200px;
+  background: rgb(236, 100, 83);
+  border: 2px solid rgb(236, 100, 83);
+  color: rgb(255, 255, 255);
+}
+
+.form button:hover {
+  background: rgb(208, 58, 57);
+  border: 2px solid rgb(208, 58, 57);
+  color: rgb(255, 255, 255);
+}
+

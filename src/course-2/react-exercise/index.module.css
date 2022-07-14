@@ -1,0 +1,28 @@
+.table {
+  width: 300px;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  border: 1px solid #ccc;
+  text-align: center;
+  padding: 10px;
+  min-height: 30px;
+  max-width: 150px;
+  min-width: 100px;
+  word-break: break-all;
+}
+
+.table th {
+  background-color: #ddd;
+}
+
+.table tr:nth-child(2n+1) {
+  background-color:bisque;
+}
+
+.table tr:nth-child(2n) {
+  background-color:beige;
+}
+
