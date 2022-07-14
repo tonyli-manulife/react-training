@@ -27,6 +27,17 @@ export default class ReactForm extends React.Component {
   handleSubmit = (e) => {
     e.preventDefault();
     console.log('handleSubmit:', this.state);
+    if (this.state.name && this.state.age) {
+      const data = {
+        ...this.state
+      }
+      this.props.onChange && this.props.onChange(data)
+      this.setState({
+        name: '',
+        age:  '',
+      })
+    }
+
   }
 
   renderHTMLForm = () => {

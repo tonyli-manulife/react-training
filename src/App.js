@@ -9,6 +9,8 @@ import ReactList from './course-2/react-list';
 import ReactStyle from './course-2/react-style';
 import ReactForm from './course-2/react-form';
 
+import ReactExercise from './course-2/react-exercise';
+
 import './App.css';
 
 function App() {
@@ -21,7 +23,8 @@ function App() {
       {/* <ReactEvents /> */}
       {/* <ReactStyle /> */}
        {/* <ReactList /> */}
-      <ReactForm />
+       <ReactExercise />
+      {/* <ReactForm /> */}
     </ManulifePage>
   );
 }
