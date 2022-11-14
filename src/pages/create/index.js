@@ -2,11 +2,11 @@ import React, { Component } from "react";
 import Button from "../../components/button";
 import Input from "../../components/input";
 import './index.css'
-import { addData } from '../../redux/action';
+import { addData,updateData } from '../../redux/action';
 import { connect } from 'react-redux';
 class Create extends Component{
     constructor(props){
-        super(props);
+        super(props)
         this.state={
             value:{}
         }
@@ -29,7 +29,19 @@ class Create extends Component{
             alert('please input gender')
             return
         }
-        this.props.addData(value,()=>this.props.history.push('/'))
+        if(value.id){
+            this.props.updateData(value.id,value,()=>this.props.history.push('/'))
+        }else{
+            this.props.addData(value,()=>this.props.history.push('/'))
+        }
+    }
+    componentDidMount(){
+        const {data} = this.props.history.location.state;
+        if(data){
+            this.setState({
+                value:data
+            })
+        }
     }
     render(){
         const {value} = this.state;
@@ -64,7 +76,8 @@ class Create extends Component{
 
 
 const mapDispatchToProps = {
-    addData
+    addData,
+    updateData
 }
 
 export default connect(null, mapDispatchToProps)(Create)

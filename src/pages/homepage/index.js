@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { connect } from 'react-redux';
 import Button from "../../components/button";
 import Table from "../../components/table";
-import { getData } from '../../redux/action';
+import { getData,deleteData} from '../../redux/action';
 class HomePage extends Component {
     constructor(props) {
         super(props);
@@ -29,9 +29,33 @@ class HomePage extends Component {
             {
                 label: 'Gender',
                 key: 'gender',
+            },
+            {
+                label:'Operate',
+                render:(value,row) => {
+                    return (
+                        <p>
+                            <a onClick={(e)=>this.editClick(e,row)} href="#">Edit</a>&nbsp;
+                            <a onClick={(e)=>this.deleteClick(e,row)} href="#">Delete</a>
+                        </p>
+                    )
+                }
             }
         ]
     }
+
+    editClick(e,data){
+        //阻止浏览器a标签默认点击事件
+        e.preventDefault();
+        this.props.history.push('/create',{data})
+    }
+
+    deleteClick(e,data){
+        //阻止浏览器a标签默认点击事件
+        e.preventDefault();
+        this.props.deleteData(data.id,()=>this.props.getData())
+    }
+
     componentDidMount() {
         this.props.getData();
     }
@@ -40,12 +64,6 @@ class HomePage extends Component {
         this.setState({
             data
         })
-    }
-    deleteData(id) {
-        let flag = window.confirm('Do you confirm to delete this data?');
-        if (flag) {
-            this.props.deleteData(id, this.props.getData);
-        }
     }
     render() {
         const { data } = this.state;
@@ -66,6 +84,7 @@ const mapStateToProps = (state) => {
     }
 }
 const mapDispatchToProps = {
-    getData
+    getData,
+    deleteData
 }
 export default connect(mapStateToProps, mapDispatchToProps)(HomePage);

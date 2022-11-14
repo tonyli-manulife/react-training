@@ -18,5 +18,21 @@ const addData=(data,callback)=>{
         })
     }
 }
+//update data
+const updateData=(id,data,callback)=>{
+    return () =>{
+        axios.updateData(id,data).then(() => {
+            callback && callback();
+        })
+    }
+}
+
+const deleteData=(id,callback)=>{
+    return () => {
+        axios.deleteData(id).then(() => {
+            callback && callback();
+        })
+    }
+}
 //todo delete data and edit data
-export {getData,addData};
+export {getData,addData,updateData,deleteData};

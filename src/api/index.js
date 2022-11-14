@@ -9,7 +9,14 @@ class Api{
     addData(data){
         return axios.post('/api',data);
     }
-    //todo delete data and edit data
+    //update data
+    updateData(id,data){
+        return axios.post(`/api/${id}`,data);
+    }
+    //delete data
+    deleteData(id){
+        return axios.delete(`/api/${id}`);
+    }
 }
 const api = new Api();
 export default api;
