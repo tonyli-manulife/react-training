@@ -1,4 +1,4 @@
-### how to acces the markdown file by html
+### how to access the markdown file by html
 
 
 
