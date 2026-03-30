@@ -1,0 +1,27 @@
+.menu {
+  background-color: #f8f9fa;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.menu-list {
+  list-style: none;
+  display: block; /* Change from flex to block for vertical layout */
+  margin: 0;
+  padding: 0;
+}
+
+.menu-item {
+  font-size: 16px;
+  margin-bottom: 10px; /* Add spacing between menu items */
+}
+
+.menu-item a {
+  text-decoration: none;
+  color: #007bff;
+  transition: color 0.3s;
+}
+
+.menu-item a:hover {
+  color: #0056b3;
+}
